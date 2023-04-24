@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:smartcomm_pms_application/getStarted.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 
@@ -9,7 +8,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      backgroundColor: Colors.black,
       body: SplashScreenStful(),
     );
   }
@@ -25,9 +25,9 @@ class SplashScreenStful extends StatefulWidget {
 class _SplashScreenStfulState extends State<SplashScreenStful> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => GetStarted()));
+          context, MaterialPageRoute(builder: (context) => const GetStarted()));
     });
     super.initState();
   }
@@ -38,12 +38,10 @@ class _SplashScreenStfulState extends State<SplashScreenStful> {
       children: [
         Align(
           alignment: Alignment.center,
-          child: Container(
-            child: Image.asset(
-              "assets/smartcomm_bg.jpg",
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
+          child: Image.asset(
+            "assets/smartcomm_bg.jpg",
+            height: double.infinity,
+            fit: BoxFit.cover,
           ),
         ),
         Align(
@@ -59,8 +57,8 @@ class _SplashScreenStfulState extends State<SplashScreenStful> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Image.asset(
-              // "assets/smartcomm_bg.jpg",
-              "assets/smartcomm_logo_white.png",
+              // "assets/logo/smartcomm_bg.jpg",
+              "assets/logo/smartcomm_logo_white.png",
               // height: 200,
               width: double.infinity,
               // height: double.infinity,
