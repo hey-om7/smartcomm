@@ -103,6 +103,7 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                               backgroundColor:
                                   BasicValues.gray2.withOpacity(0.6),
                               borderRadius: 5,
+                              onPress: () {},
                             ),
                           ),
                           const Padding(
@@ -203,4 +204,11 @@ class input_cards extends StatelessWidget {
       ),
     );
   }
+}
+
+void dothis(context) {
+  Navigator.push(context, MaterialPageRoute(builder: ((context) {
+    LoginPage();
+    return Container();
+  })));
 }
