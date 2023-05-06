@@ -1,5 +1,6 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:smartcomm_pms_application/dashboard.dart';
 
 import 'globalVals.dart';
 
@@ -103,7 +104,13 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                               backgroundColor:
                                   BasicValues.gray2.withOpacity(0.6),
                               borderRadius: 5,
-                              onPress: () {},
+                              onPress: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const Dashboard()));
+                              },
                             ),
                           ),
                           const Padding(
@@ -204,11 +211,4 @@ class input_cards extends StatelessWidget {
       ),
     );
   }
-}
-
-void dothis(context) {
-  Navigator.push(context, MaterialPageRoute(builder: ((context) {
-    LoginPage();
-    return Container();
-  })));
 }
