@@ -1,5 +1,5 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/widgets.dart';
 
 import 'globalVals.dart';

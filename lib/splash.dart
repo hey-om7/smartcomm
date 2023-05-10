@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:smartcomm_pms_application/getStarted.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
@@ -38,10 +39,14 @@ class _SplashScreenStfulState extends State<SplashScreenStful> {
       children: [
         Align(
           alignment: Alignment.center,
-          child: Image.asset(
-            "assets/smartcomm_bg.jpg",
-            height: double.infinity,
-            fit: BoxFit.cover,
+          // child: Image.asset(
+          //   "assets/smartcomm_bg.jpg",
+          //   height: double.infinity,
+          //   fit: BoxFit.cover,
+          // ),
+          child: SvgPicture.asset(
+            "assets/smartcomm_bg_img.svg",
+            semanticsLabel: 'Acme Logo',
           ),
         ),
         Align(

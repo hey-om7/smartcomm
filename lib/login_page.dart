@@ -1,6 +1,7 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/dashboard.dart';
+import 'package:smartcomm_pms_application/homepage.dart';
 
 import 'globalVals.dart';
 
@@ -82,7 +83,8 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                             height: 40,
                           ),
                           const input_cards(hinttext: "Username"),
-                          const input_cards(hinttext: "Password"),
+                          const input_cards(
+                              hinttext: "Password", ispassword: true),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -109,7 +111,7 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const Dashboard()));
+                                            const HomePage()));
                               },
                             ),
                           ),
@@ -165,8 +167,10 @@ class input_cards extends StatelessWidget {
   const input_cards({
     super.key,
     required this.hinttext,
+    this.ispassword,
   });
   final String hinttext;
+  final bool? ispassword;
 
   @override
   Widget build(BuildContext context) {
@@ -188,6 +192,7 @@ class input_cards extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   child: TextFormField(
+                    obscureText: ispassword ?? false,
                     style: const TextStyle(
                       fontSize: 20,
                       color: Colors.white,
