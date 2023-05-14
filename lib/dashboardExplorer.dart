@@ -1,7 +1,6 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 
 class DashboardExplorer extends StatelessWidget {

@@ -9,11 +9,11 @@ class Alarms extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 15.0),
+        const Padding(
+          padding: EdgeInsets.only(top: 15.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            children: [
               SeverityCard(title: "Severe", color: Color(0XFFC42126)),
               SeverityCard(title: "Alarm", color: Color(0xffC46F21)),
               SeverityCard(title: "Warning", color: Color(0xffF4D62A)),
@@ -25,18 +25,56 @@ class Alarms extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
-          child: ListView(
-            children: const [
-              SizedBox(
-                height: 25,
+        Container(
+          margin: const EdgeInsets.all(10),
+          height: 30,
+          width: getDeviceWidth(context),
+          decoration: BoxDecoration(
+            color: const Color(0xffD9D9D9).withOpacity(0.5),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          alignment: Alignment.center,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: TextFormField(
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Search",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ),
               ),
-              AlarmCard(alarmsmode: AlarmsMode.Alarm),
-              AlarmCard(alarmsmode: AlarmsMode.Severe),
-              AlarmCard(alarmsmode: AlarmsMode.Warning),
-              AlarmCard(alarmsmode: AlarmsMode.Information),
-              AlarmCard(alarmsmode: AlarmsMode.Severe),
+              Image.asset(
+                "assets/icon_filter.png",
+                width: 20,
+                height: 20,
+              ),
             ],
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ListView(
+              children: const [
+                AlarmCard(alarmsmode: AlarmsMode.Alarm),
+                AlarmCard(alarmsmode: AlarmsMode.Severe),
+                AlarmCard(alarmsmode: AlarmsMode.Warning),
+                AlarmCard(alarmsmode: AlarmsMode.Information),
+                AlarmCard(alarmsmode: AlarmsMode.Severe),
+              ],
+            ),
           ),
         ),
       ],
@@ -104,7 +142,7 @@ This Widget function takes in input as follows:
 2.)value: The value of that particualr alarm card instance.
 3.)title: The title of that particualr alarm card instance.
  */
-class AlarmCard extends StatelessWidget {
+class AlarmCard extends StatefulWidget {
   const AlarmCard({
     super.key,
     required this.alarmsmode,
@@ -112,101 +150,301 @@ class AlarmCard extends StatelessWidget {
 
   final AlarmsMode alarmsmode;
   @override
+  State<AlarmCard> createState() => _AlarmCardState();
+}
+
+class _AlarmCardState extends State<AlarmCard> {
+  bool isOpened = false;
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 55,
-      width: getDeviceWidth(context),
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(
-        color: BasicValues.basicBlue2,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          BoxShadow(
-            spreadRadius: 1,
-            blurRadius: 1,
-            color: Colors.black.withOpacity(0.2),
-            offset: const Offset(5, 5),
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: () {
+            isOpened = !isOpened;
+            setState(() {});
+          },
+          child: Container(
+            height: 55,
+            width: getDeviceWidth(context),
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            decoration: BoxDecoration(
+              color: BasicValues.basicBlue2,
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: [
+                BoxShadow(
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  color: Colors.black.withOpacity(0.2),
+                  offset: const Offset(5, 5),
+                ),
+              ],
+              border: Border.all(
+                color: getAlarmCardColor(widget.alarmsmode),
+                width: 1.5,
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const myText(
+                      text: "Value",
+                      fontSize: 10,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        color: getAlarmCardColor(widget.alarmsmode),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const myText(
+                        text: "80",
+                        fontSize: 12,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const myText(
+                      text: "Time Stamp",
+                      fontSize: 10,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const myText(
+                        text: "2023-03-17  15:04:59",
+                        fontSize: 12,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const myText(
+                      text: "Tag Name",
+                      fontSize: 10,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const myText(
+                        text: "Meter_4410.MX.V_LL.RY",
+                        fontSize: 12,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                Image.asset(
+                  "assets/icon_arrow_down.png",
+                  width: 10,
+                  height: 10,
+                ),
+              ],
+            ),
           ),
-        ],
-        border: Border.all(
-          color: getAlarmCardColor(alarmsmode),
-          width: 1.5,
         ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              const myText(
-                text: "Value",
-                fontSize: 10,
-                color: Colors.white,
-              ),
-              Container(
-                padding: const EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: getAlarmCardColor(alarmsmode),
-                  borderRadius: BorderRadius.circular(5),
+        Visibility(
+          visible: isOpened,
+          child: Container(
+            height: 110,
+            width: getDeviceWidth(context),
+            decoration: BoxDecoration(
+              color: BasicValues.basicBlue2,
+              borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(5),
+                  bottomRight: Radius.circular(5)),
+              boxShadow: [
+                BoxShadow(
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  color: Colors.black.withOpacity(0.2),
+                  offset: const Offset(5, 5),
                 ),
-                child: const myText(
-                  text: "80",
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
+              ],
+              border: Border.all(
+                color: getAlarmCardColor(widget.alarmsmode),
+                width: 1.5,
               ),
-            ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const myText(
+                          text: "Value",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            // color: getAlarmCardColor(widget.alarmsmode),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "80",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const myText(
+                          text: "Time Stamp",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "2023-03-17  15:04:59",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const myText(
+                          text: "Tag Name",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "Meter_4410.MX.V_LL.RY",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const myText(
+                          text: "Value",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            // color: getAlarmCardColor(widget.alarmsmode),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "80",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const myText(
+                          text: "Time Stamp",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "2023-03-17  15:04:59",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const myText(
+                          text: "Tag Name",
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const myText(
+                            text: "Meter_4410.MX.V_LL.RY",
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const myText(
-                text: "Time Stamp",
-                fontSize: 10,
-                color: Colors.white,
-              ),
-              Container(
-                padding: const EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: const myText(
-                  text: "2023-03-17  15:04:59",
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const myText(
-                text: "Tag Name",
-                fontSize: 10,
-                color: Colors.white,
-              ),
-              Container(
-                padding: const EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: const myText(
-                  text: "Meter_4410.MX.V_LL.RY",
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }

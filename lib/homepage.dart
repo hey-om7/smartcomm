@@ -23,29 +23,34 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          // height: 200,
-          color: BasicValues.basicBlue,
-          width: double.infinity,
-          child: Center(
-            child: Image.asset(
-              BasicValues.smartCommLogoWhite,
-              width: 100,
-              // height: 50,
-            ),
-          ),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
         ),
-      ),
-      bottomNavigationBar: Navbar(
-        refreshState: refreshThisWidget,
-      ),
-      backgroundColor: BasicValues.basicBlue3,
-      body: [
-        const DashboardStful(),
-        const Alarms(),
-        const DashboardExplorer(),
-      ][activeIndex - 1],
-    );
+        bottomNavigationBar: Navbar(
+          refreshState: refreshThisWidget,
+        ),
+        backgroundColor: BasicValues.basicBlue3,
+        body: Column(
+          children: [
+            Container(
+              height: 70,
+              color: BasicValues.basicBlue,
+              width: double.infinity,
+              child: Center(
+                child: Image.asset(
+                  BasicValues.smartCommLogoWhite,
+                  width: 150,
+                  height: 35,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            [
+              const DashboardStful(),
+              const Alarms(),
+              const DashboardExplorer(),
+            ][activeIndex - 1],
+          ],
+        ));
   }
 }
