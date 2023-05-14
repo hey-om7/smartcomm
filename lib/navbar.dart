@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 
 int activeIndex = 1;
@@ -25,7 +24,7 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 60,
       width: double.infinity,
       // color: Colors.orange,
       color: BasicValues.basicBlue,

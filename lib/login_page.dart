@@ -1,8 +1,6 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:smartcomm_pms_application/dashboard.dart';
 import 'package:smartcomm_pms_application/homepage.dart';
-
 import 'globalVals.dart';
 
 class LoginPage extends StatelessWidget {
@@ -85,11 +83,11 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                           const input_cards(hinttext: "Username"),
                           const input_cards(
                               hinttext: "Password", ispassword: true),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              children: const [
+                              children: [
                                 myText(
                                   text: "Forgot Password?",
                                   color: Colors.white,

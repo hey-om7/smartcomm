@@ -1,7 +1,6 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
-import 'package:smartcomm_pms_application/navbar.dart';
 import 'widgets/HistoricalTrends.dart';
 import 'widgets/MultiValuedCard.dart';
 import 'widgets/PieChartDonut.dart';

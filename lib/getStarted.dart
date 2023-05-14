@@ -87,6 +87,7 @@ class GetStarted extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: SizedBox(
                 height: 125,
+                width: getDeviceWidth(context),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -110,8 +111,10 @@ class GetStarted extends StatelessWidget {
                       height: 25,
                     ),
                     Image.asset(
-                      "assets/logo/EAlogowhite.png",
-                      height: 40,
+                      BasicValues.electronicsAutomationLogoWhite,
+                      width: 175,
+                      height: 25,
+                      fit: BoxFit.fill,
                     ),
                   ],
                 ),

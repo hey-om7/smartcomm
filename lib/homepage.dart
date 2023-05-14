@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:smartcomm_pms_application/alarms.dart';
+import 'package:smartcomm_pms_application/dashboardExplorer.dart';
 
 import 'dashboard.dart';
 import 'globalVals.dart';
@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
       body: [
         const DashboardStful(),
         const Alarms(),
+        const DashboardExplorer(),
       ][activeIndex - 1],
     );
   }
