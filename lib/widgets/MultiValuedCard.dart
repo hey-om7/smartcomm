@@ -14,9 +14,10 @@ class MultivaluedCard extends StatelessWidget {
       height: 100,
       width: getDeviceWidth(context) / 2,
       margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       child: ListView(
         shrinkWrap: true,
+        physics: const BouncingScrollPhysics(),
         children: const [
           myText(
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
@@ -34,6 +35,18 @@ class MultivaluedCard extends StatelessWidget {
           ),
           MultivaluedCardValues(
             title: "Reactive Lead (kVArh)",
+            value: 8259.22,
+          ),
+          MultivaluedCardValues(
+            title: "Reactive Lag (kVArh)",
+            value: 8259.22,
+          ),
+          MultivaluedCardValues(
+            title: "Reactive Lag (kVArh)",
+            value: 8259.22,
+          ),
+          MultivaluedCardValues(
+            title: "Reactive Lag (kVArh)",
             value: 8259.22,
           ),
           MultivaluedCardValues(

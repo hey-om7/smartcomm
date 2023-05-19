@@ -23,9 +23,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-        ),
+        // appBar: AppBar(
+        //   automaticallyImplyLeading: false,
+        // ),
         bottomNavigationBar: Navbar(
           refreshState: refreshThisWidget,
         ),

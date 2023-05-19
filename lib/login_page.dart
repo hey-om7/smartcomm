@@ -1,5 +1,6 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:smartcomm_pms_application/forgot_password.dart';
 import 'package:smartcomm_pms_application/homepage.dart';
 import 'globalVals.dart';
 
@@ -83,15 +84,24 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                           const input_cards(hinttext: "Username"),
                           const input_cards(
                               hinttext: "Password", ispassword: true),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                myText(
-                                  text: "Forgot Password?",
-                                  color: Colors.white,
-                                  fontSize: 18,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ForgotPassword()));
+                                  },
+                                  child: const myText(
+                                    text: "Forgot Password?",
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                  ),
                                 ),
                               ],
                             ),
@@ -166,9 +176,11 @@ class input_cards extends StatelessWidget {
     super.key,
     required this.hinttext,
     this.ispassword,
+    this.child,
   });
   final String hinttext;
   final bool? ispassword;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -187,24 +199,25 @@ class input_cards extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                  child: TextFormField(
-                    obscureText: ispassword ?? false,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                child: child ??
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                      child: TextFormField(
+                        obscureText: ispassword ?? false,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: hinttext,
+                            hintStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal)),
+                      ),
                     ),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: hinttext,
-                        hintStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal)),
-                  ),
-                ),
               ),
 
               // Spacer(),

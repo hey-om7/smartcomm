@@ -7,77 +7,80 @@ class Alarms extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SeverityCard(title: "Severe", color: Color(0XFFC42126)),
-              SeverityCard(title: "Alarm", color: Color(0xffC46F21)),
-              SeverityCard(title: "Warning", color: Color(0xffF4D62A)),
-              SeverityCard(
-                title: "Information",
-                color: Color(0xff199710),
-                imagePath: "assets/icons/icon_tick.png",
-              ),
-            ],
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(10),
-          height: 30,
-          width: getDeviceWidth(context),
-          decoration: BoxDecoration(
-            color: const Color(0xffD9D9D9).withOpacity(0.5),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          alignment: Alignment.center,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: TextFormField(
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Search",
-                    hintStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
+    return Expanded(
+      child: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(top: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SeverityCard(title: "Severe", color: Color(0XFFC42126)),
+                SeverityCard(title: "Alarm", color: Color(0xffC46F21)),
+                SeverityCard(title: "Warning", color: Color(0xffF4D62A)),
+                SeverityCard(
+                  title: "Information",
+                  color: Color(0xff199710),
+                  imagePath: "assets/icons/icon_tick.png",
                 ),
-              ),
-              Image.asset(
-                "assets/icon_filter.png",
-                width: 20,
-                height: 20,
-              ),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: ListView(
-              children: const [
-                AlarmCard(alarmsmode: AlarmsMode.Alarm),
-                AlarmCard(alarmsmode: AlarmsMode.Severe),
-                AlarmCard(alarmsmode: AlarmsMode.Warning),
-                AlarmCard(alarmsmode: AlarmsMode.Information),
-                AlarmCard(alarmsmode: AlarmsMode.Severe),
               ],
             ),
           ),
-        ),
-      ],
+          Container(
+            margin: const EdgeInsets.all(10),
+            height: 30,
+            width: getDeviceWidth(context),
+            decoration: BoxDecoration(
+              color: const Color(0xffD9D9D9).withOpacity(0.5),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            alignment: Alignment.center,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    decoration: const InputDecoration(
+                      // contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
+                      border: InputBorder.none,
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
+                Image.asset(
+                  "assets/icon_filter.png",
+                  width: 20,
+                  height: 20,
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListView(
+                children: const [
+                  AlarmCard(alarmsmode: AlarmsMode.Alarm),
+                  AlarmCard(alarmsmode: AlarmsMode.Severe),
+                  AlarmCard(alarmsmode: AlarmsMode.Warning),
+                  AlarmCard(alarmsmode: AlarmsMode.Information),
+                  AlarmCard(alarmsmode: AlarmsMode.Severe),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

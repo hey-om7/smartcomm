@@ -50,6 +50,7 @@ class GetStarted extends StatelessWidget {
                     height: getDeviceHeight(context) * 0.4,
                     child: GridView.count(
                       scrollDirection: Axis.horizontal,
+                      physics: const BouncingScrollPhysics(),
                       crossAxisCount: 2,
                       // crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
