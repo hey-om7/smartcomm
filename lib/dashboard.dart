@@ -39,6 +39,24 @@ class _DashboardStfulState extends State<DashboardStful> {
         child: SafeArea(
           child: Column(
             children: [
+              Container(
+                height: 30,
+                width: getDeviceWidth(context),
+                color: BasicValues.basicBlue2,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 10),
+                child: const myText(
+                  text:
+                      "Dashboard >> Deviceview >> Meters >> WC4410 >> WC4410Dashboard",
+                  fontSize: 10,
+                  color: Colors.white,
+                ),
+              ),
+              const Divider(
+                color: Colors.white,
+                thickness: 0.5,
+                height: 0,
+              ),
               GridView.count(
                 physics: const NeverScrollableScrollPhysics(),
                 crossAxisCount: 2,
@@ -128,9 +146,9 @@ class _DashboardStfulState extends State<DashboardStful> {
                   ],
                 ),
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
+                children: [
                   PieChartDonut(
                     title: "Active Power (kW)",
                     value: 59.55,

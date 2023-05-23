@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:smartcomm_pms_application/getStarted.dart';
@@ -9,6 +10,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     return const Scaffold(
       backgroundColor: Colors.black,
       body: SplashScreenStful(),

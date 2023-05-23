@@ -33,16 +33,25 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             Container(
-              height: 70,
+              height: 40,
               color: BasicValues.basicBlue,
               width: double.infinity,
-              child: Center(
-                child: Image.asset(
-                  BasicValues.smartCommLogoWhite,
-                  width: 150,
-                  height: 35,
-                  fit: BoxFit.fill,
-                ),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Image.asset(
+                    BasicValues.smartCommLogoWhite,
+                    width: 150,
+                    height: 35,
+                    fit: BoxFit.fill,
+                  ),
+                  const Spacer(),
+                  Image.asset(
+                    "assets/profile-icon.png",
+                    width: 25,
+                    height: 25,
+                  ),
+                ],
               ),
             ),
             [

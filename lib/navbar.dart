@@ -24,13 +24,16 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 50,
+      padding: EdgeInsets.only(
+        bottom: 10,
+      ),
       width: double.infinity,
       // color: Colors.orange,
       color: BasicValues.basicBlue,
       child: SafeArea(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             NavbarWidgets(
               active: activeIndex == 1,

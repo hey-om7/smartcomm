@@ -11,7 +11,7 @@ class Alarms extends StatelessWidget {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(top: 15.0),
+            padding: EdgeInsets.only(top: 30.0, bottom: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -19,10 +19,9 @@ class Alarms extends StatelessWidget {
                 SeverityCard(title: "Alarm", color: Color(0xffC46F21)),
                 SeverityCard(title: "Warning", color: Color(0xffF4D62A)),
                 SeverityCard(
-                  title: "Information",
-                  color: Color(0xff199710),
-                  imagePath: "assets/icons/icon_tick.png",
-                ),
+                    title: "Information",
+                    color: Color(0xff199710),
+                    imagePath: "assets/icons/icon_tick.png"),
               ],
             ),
           ),
