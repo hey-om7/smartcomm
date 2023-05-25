@@ -68,6 +68,7 @@ class Alarms extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: ListView(
+                physics: const BouncingScrollPhysics(),
                 children: const [
                   AlarmCard(alarmsmode: AlarmsMode.Alarm),
                   AlarmCard(alarmsmode: AlarmsMode.Severe),
