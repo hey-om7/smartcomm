@@ -119,21 +119,27 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                   },
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  "New to Smartcomm? Sign up Now",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    decoration: TextDecoration.underline,
+              GestureDetector(
+                onTap: () {
+                  toastMessagePopup(context,
+                      "This feature will be available in the future update");
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "New to Smartcomm? Sign up Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
+                  // child: myText(
+                  //   text: "New to Smartcomm? Sign up Now",
+                  //   fontSize: 18,
+                  //   color: Colors.white,
+                  // ),
                 ),
-                // child: myText(
-                //   text: "New to Smartcomm? Sign up Now",
-                //   fontSize: 18,
-                //   color: Colors.white,
-                // ),
               ),
             ],
           ),

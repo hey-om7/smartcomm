@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/alarms.dart';
-import 'package:smartcomm_pms_application/dashboardExplorer.dart';
+import 'package:smartcomm_pms_application/reports.dart';
+import 'package:smartcomm_pms_application/settings/editProfilename.dart';
 import 'package:smartcomm_pms_application/settings/settings.dart';
 import 'package:smartcomm_pms_application/settings/settingsProfile.dart';
 
@@ -59,9 +60,11 @@ class _HomePageState extends State<HomePage> {
             [
               const DashboardStful(),
               const Alarms(),
-              const DashboardExplorer(),
-              const Settings(),
+              // const DashboardExplorer(),
+              const Reports(),
+              Settings(refreshParent: refreshThisWidget),
               const SettingsProfile(),
+              EditProfileName(refreshParent: refreshThisWidget)
             ][activeIndex - 1],
           ],
         ));

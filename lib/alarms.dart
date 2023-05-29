@@ -45,7 +45,8 @@ class Alarms extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                     decoration: const InputDecoration(
-                      // contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 9, horizontal: 20),
                       border: InputBorder.none,
                       hintText: "Search",
                       hintStyle: TextStyle(

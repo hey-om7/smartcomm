@@ -1,11 +1,20 @@
 import 'package:essential_kit/essential_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 import 'package:smartcomm_pms_application/navbar.dart';
 
-class Settings extends StatelessWidget {
-  const Settings({super.key});
+bool isdarkmode = true;
+bool isnotificationsactive = false;
 
+class Settings extends StatefulWidget {
+  const Settings({super.key, required this.refreshParent});
+  final Function() refreshParent;
+  @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -29,7 +38,9 @@ class Settings extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              activeIndex = 4;
+              activeIndex = 5;
+              widget.refreshParent();
+              // isSettingsProfilePage = true;
             },
             child: Row(
               children: [
@@ -63,30 +74,51 @@ class Settings extends StatelessWidget {
           const SettingsTitle(
             title: "Theme",
           ),
-          const Row(
+          Row(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
                 child: myText(
                   text: "Dark Mode",
                   color: Colors.white,
                   fontSize: 14,
                 ),
+              ),
+              const Spacer(),
+              CupertinoSwitch(
+                activeColor: BasicValues.basicBlue2,
+                value: isdarkmode,
+                onChanged: (value) {
+                  setState(() {
+                    isdarkmode = !isdarkmode;
+                  });
+                },
               )
             ],
           ),
           const SettingsTitle(
             title: "Notification",
           ),
-          const Row(
+          Row(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
                 child: myText(
                   text: "Notifications",
                   color: Colors.white,
                   fontSize: 14,
                 ),
+              ),
+              const Spacer(),
+              CupertinoSwitch(
+                activeColor: BasicValues.basicBlue2,
+                trackColor: BasicValues.basicBlue2.withOpacity(0.5),
+                value: isnotificationsactive,
+                onChanged: (value) {
+                  setState(() {
+                    isnotificationsactive = !isnotificationsactive;
+                  });
+                },
               )
             ],
           ),
@@ -99,7 +131,15 @@ class Settings extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 14,
                 ),
-              )
+              ),
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Icon(
+                  Icons.arrow_right,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
           const SettingsTitle(
