@@ -37,6 +37,7 @@ dependencies:
   essential_kit: ^0.0.3
   flutter_svg: ^2.0.5
   image_picker: ^0.8.7+5
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:

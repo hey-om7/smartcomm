@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/forgot_password.dart';
 import 'package:smartcomm_pms_application/homepage.dart';
 import 'globalVals.dart';
+import 'package:http/http.dart' as http;
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -42,6 +45,10 @@ class LoginPageStful extends StatefulWidget {
 class _LoginPageStfulState extends State<LoginPageStful> {
   @override
   Widget build(BuildContext context) {
+    final TextEditingController usernameTextController =
+        TextEditingController();
+    final TextEditingController passwordTextController =
+        TextEditingController();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -81,14 +88,16 @@ class _LoginPageStfulState extends State<LoginPageStful> {
               const SizedBox(
                 height: 40,
               ),
-              const input_cards(
+              input_cards(
                 hinttext: "Username",
                 imgpath: "assets/login/account_profile.png",
+                textEditingController: usernameTextController,
               ),
-              const input_cards(
+              input_cards(
                 hinttext: "Password",
                 ispassword: true,
                 imgpath: 'assets/login/icon_eye.png',
+                textEditingController: passwordTextController,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -119,10 +128,19 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                   backgroundColor: BasicValues.gray2.withOpacity(0.6),
                   borderRadius: 5,
                   onPress: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                    // checkValidityUser("Super_User", "Super@123456")
+                    checkValidityUser(usernameTextController.text,
+                            passwordTextController.text)
+                        .then((value) {
+                      if (value == true) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomePage()));
+                      } else {
+                        toastMessagePopup(context, "Invalid Credentials");
+                      }
+                    });
                   },
                 ),
               ),
@@ -161,8 +179,43 @@ class _LoginPageStfulState extends State<LoginPageStful> {
         ),
         const SizedBox(
           height: 10,
-        )
+        ),
       ],
+    );
+  }
+}
+
+Future checkValidityUser(String username, String password) async {
+  // Super@12345
+  // Super_User
+
+  final response = await http.get(Uri.parse(
+      'http://10.189.118.85:4000/login?user=$username&pass=$password'));
+  if (response.statusCode == 200) {
+    var n1 = LoginCreds.fromJson(jsonDecode(response.body));
+    if (n1.status == 1) {
+      printBlue("auth successful");
+      return true;
+    }
+  } else {
+    printError("Error fetching request, HTTP CODE:${response.statusCode}");
+  }
+  printBlue("auth not success");
+  return false;
+}
+
+class LoginCreds {
+  final int status;
+  final String message;
+  const LoginCreds({
+    required this.status,
+    required this.message,
+  });
+
+  factory LoginCreds.fromJson(Map<String, dynamic> json) {
+    return LoginCreds(
+      status: json['status'],
+      message: json['message'],
     );
   }
 }
@@ -175,11 +228,13 @@ class input_cards extends StatelessWidget {
     this.ispassword,
     this.child,
     required this.imgpath,
+    required this.textEditingController,
   });
   final String hinttext;
   final bool? ispassword;
   final Widget? child;
   final String imgpath;
+  final TextEditingController textEditingController;
 
   @override
   Widget build(BuildContext context) {
@@ -202,6 +257,7 @@ class input_cards extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: TextFormField(
+                        controller: textEditingController,
                         obscureText: ispassword ?? false,
                         style: const TextStyle(
                           fontSize: 20,
