@@ -81,8 +81,15 @@ class _LoginPageStfulState extends State<LoginPageStful> {
               const SizedBox(
                 height: 40,
               ),
-              const input_cards(hinttext: "Username"),
-              const input_cards(hinttext: "Password", ispassword: true),
+              const input_cards(
+                hinttext: "Username",
+                imgpath: "assets/login/account_profile.png",
+              ),
+              const input_cards(
+                hinttext: "Password",
+                ispassword: true,
+                imgpath: 'assets/login/icon_eye.png',
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -167,10 +174,12 @@ class input_cards extends StatelessWidget {
     required this.hinttext,
     this.ispassword,
     this.child,
+    required this.imgpath,
   });
   final String hinttext;
   final bool? ispassword;
   final Widget? child;
+  final String imgpath;
 
   @override
   Widget build(BuildContext context) {
@@ -184,7 +193,7 @@ class input_cards extends StatelessWidget {
           color: BasicValues.gray1.withOpacity(0.5),
         ),
         child: SizedBox(
-          width: double.infinity,
+          // width: double.infinity,
           height: 20,
           child: Row(
             children: [
@@ -209,7 +218,14 @@ class input_cards extends StatelessWidget {
                       ),
                     ),
               ),
-
+              Image.asset(
+                imgpath,
+                height: 30,
+                width: 30,
+              ),
+              const SizedBox(
+                width: 15,
+              ),
               // Spacer(),
             ],
           ),

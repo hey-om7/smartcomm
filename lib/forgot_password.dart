@@ -133,8 +133,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 8.0),
                               child: selectedRadioButton == 1
-                                  ? const input_cards(hinttext: "Email")
-                                  : input_cards(
+                                  ? const forgot_password_card(
+                                      hinttext: "Email")
+                                  : forgot_password_card(
                                       hinttext: "Password",
                                       child: Row(
                                         children: [
@@ -217,6 +218,64 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
               ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class forgot_password_card extends StatelessWidget {
+  const forgot_password_card({
+    super.key,
+    required this.hinttext,
+    this.ispassword,
+    this.child,
+  });
+  final String hinttext;
+  final bool? ispassword;
+  final Widget? child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 50,
+        width: getDeviceWidth(context),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: BasicValues.gray1.withOpacity(0.5),
+        ),
+        child: SizedBox(
+          // width: double.infinity,
+          height: 20,
+          child: Row(
+            children: [
+              Expanded(
+                child: child ??
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                      child: TextFormField(
+                        obscureText: ispassword ?? false,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: hinttext,
+                            hintStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal)),
+                      ),
+                    ),
+              ),
+
+              // Spacer(),
             ],
           ),
         ),

@@ -210,6 +210,9 @@ class _SettingsState extends State<Settings> {
             textSize: 18,
             backgroundColor: const Color(0xffEB8A9C).withOpacity(0.6),
             borderRadius: 0,
+            onPress: () {
+              Navigator.pop(context);
+            },
           )
         ],
       ),

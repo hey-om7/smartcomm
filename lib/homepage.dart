@@ -1,3 +1,4 @@
+import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/alarms.dart';
@@ -20,6 +21,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   void refreshThisWidget() {
+    printBlue("refreshed homepage");
     setState(() {});
   }
 
@@ -63,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               // const DashboardExplorer(),
               const Reports(),
               Settings(refreshParent: refreshThisWidget),
-              const SettingsProfile(),
+              SettingsProfile(refreshParent: refreshThisWidget),
               EditProfileName(refreshParent: refreshThisWidget)
             ][activeIndex - 1],
           ],

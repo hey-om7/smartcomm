@@ -65,6 +65,7 @@ flutter:
     - assets/logo/
     - assets/navbar/
     - assets/icons/
+    - assets/login/
     - assets/onetime_use/GetStarted/
     - assets/widgets/single-value/
     - assets/settings_profile/

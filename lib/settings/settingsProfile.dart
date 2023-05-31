@@ -3,14 +3,19 @@ import 'dart:io';
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
+import 'package:smartcomm_pms_application/navbar.dart' show activeIndex;
 import 'package:smartcomm_pms_application/settings/bottompullup.dart';
 
 class SettingsProfile extends StatefulWidget {
-  const SettingsProfile({super.key});
+  const SettingsProfile({super.key, required this.refreshParent});
 
   @override
   State<SettingsProfile> createState() => _SettingsProfileState();
+  final VoidCallback refreshParent;
 }
+
+String editprofilenametest = "";
+String editprofilenameimgtest = "";
 
 class _SettingsProfileState extends State<SettingsProfile> {
   @override
@@ -75,7 +80,14 @@ class _SettingsProfileState extends State<SettingsProfile> {
           SettingsProfilePageCard(
             title: "Change Username",
             imagePath: "assets/settings_profile/icon_profile.png",
-            ontap: () {},
+            ontap: () {
+              activeIndex = 6;
+              editprofilenametest = "Micheal Archer";
+              editprofilenameimgtest =
+                  "assets/settings_profile/icon_profile.png";
+              widget.refreshParent();
+              printWarning("pressed");
+            },
           ),
           SettingsProfilePageCard(
             title: "Change Password",
@@ -111,44 +123,47 @@ class SettingsProfilePageCard extends StatelessWidget {
     required this.imagePath,
   });
   final String title;
-  final Function ontap;
+  final VoidCallback ontap;
   final String imagePath;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: getDeviceWidth(context),
-      margin: const EdgeInsets.all(10),
-      height: 35,
-      decoration: BoxDecoration(
-        color: BasicValues.basicBlue2,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 12,
-          ),
-          Image.asset(
-            imagePath,
-            width: 20,
-            height: 20,
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          myText(
-            text: title,
-            color: Colors.white,
-            fontSize: 14,
-          ),
-          const Spacer(),
-          Image.asset(
-            "assets/settings_profile/right_arrow.png",
-            width: 10,
-            height: 10,
-          ),
-        ],
+    return GestureDetector(
+      onTap: ontap,
+      child: Container(
+        width: getDeviceWidth(context),
+        margin: const EdgeInsets.all(10),
+        height: 35,
+        decoration: BoxDecoration(
+          color: BasicValues.basicBlue2,
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Row(
+          children: [
+            const SizedBox(
+              width: 12,
+            ),
+            Image.asset(
+              imagePath,
+              width: 20,
+              height: 20,
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            myText(
+              text: title,
+              color: Colors.white,
+              fontSize: 14,
+            ),
+            const Spacer(),
+            Image.asset(
+              "assets/settings_profile/right_arrow.png",
+              width: 10,
+              height: 10,
+            ),
+          ],
+        ),
       ),
     );
   }

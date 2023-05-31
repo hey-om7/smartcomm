@@ -1,7 +1,7 @@
 import 'package:essential_kit/essential_kit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
+import 'settingsProfile.dart' show editprofilenametest, editprofilenameimgtest;
 
 bool isdarkmode = true;
 bool isnotificationsactive = false;
@@ -19,8 +19,8 @@ class _EditProfileNameState extends State<EditProfileName> {
     return Expanded(
       child: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          Row(
+        children: [
+          const Row(
             children: [
               Padding(
                 padding: EdgeInsets.all(12.0),
@@ -32,34 +32,56 @@ class _EditProfileNameState extends State<EditProfileName> {
               ),
             ],
           ),
-          SettingsTitle(
-            title: "Profile",
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class SettingsTitle extends StatelessWidget {
-  const SettingsTitle({
-    super.key,
-    required this.title,
-  });
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: getDeviceWidth(context),
-      color: BasicValues.basicBlue2,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: myText(
-              text: title,
-              color: const Color(0xffD9D9D9).withOpacity(0.5),
-              fontSize: 12,
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: getDeviceWidth(context),
+              margin: const EdgeInsets.all(10),
+              height: 35,
+              decoration: BoxDecoration(
+                color: BasicValues.basicBlue2,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Image.asset(
+                    editprofilenameimgtest,
+                    width: 20,
+                    height: 20,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  // myText(
+                  //   text: editprofilenametest,
+                  //   color: Colors.white,
+                  //   fontSize: 14,
+                  // ),
+                  Expanded(
+                    child: TextFormField(
+                      initialValue: editprofilenametest,
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(bottom: 10)),
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  // const Spacer(),
+                  Image.asset(
+                    "assets/icon_edit.png",
+                    width: 15,
+                    height: 15,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                ],
+              ),
             ),
           )
         ],
