@@ -52,14 +52,20 @@ class GetStarted extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       physics: const BouncingScrollPhysics(),
                       crossAxisCount: 2,
-                      // crossAxisSpacing: 20,
+                      // crossAxisSpacing: 200,
                       mainAxisSpacing: 20,
                       children: [
-                        Image.asset(
-                          "assets/onetime_use/GetStarted/box1.png",
-                          height: 40,
-                          width: 200,
-                          fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 40,
+                          ),
+                          child: Image.asset(
+                            "assets/onetime_use/GetStarted/box1.png",
+                            height: 40,
+                            width: 200,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         Image.asset(
                           "assets/onetime_use/GetStarted/box2.png",

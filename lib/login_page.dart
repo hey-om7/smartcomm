@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/forgot_password.dart';
@@ -51,7 +50,7 @@ class _LoginPageStfulState extends State<LoginPageStful> {
         TextEditingController();
     final TextEditingController passwordTextController =
         TextEditingController();
-    return Container(
+    return SizedBox(
       height: getDeviceHeight(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,14 +141,20 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                             // checkValidityUser("Super_User", "Super@123456")
                             checkValidityUser(usernameTextController.text,
                                     passwordTextController.text)
-                                .then((value) {
+                                .timeout(const Duration(seconds: 30),
+                                    onTimeout: () {
+                              ischecking_req = false;
+                              setState(() {});
+                              toastMessagePopup(
+                                  context, "Couldn't reach the server");
+                            }).then((value) {
                               if (value == true) {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
                                             const HomePage()));
-                              } else {
+                              } else if (value == false) {
                                 ischecking_req = false;
                                 setState(() {});
                                 toastMessagePopup(
