@@ -1,7 +1,7 @@
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:smartcomm_pms_application/alarms.dart';
+import 'package:smartcomm_pms_application/alarms/alarms.dart';
 import 'package:smartcomm_pms_application/reports.dart';
 import 'package:smartcomm_pms_application/settings/editProfilename.dart';
 import 'package:smartcomm_pms_application/settings/settings.dart';
