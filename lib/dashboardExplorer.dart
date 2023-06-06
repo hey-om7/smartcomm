@@ -2,12 +2,15 @@ import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
+import 'login_page.dart' as loginpage;
 
 class DashboardExplorer extends StatelessWidget {
   const DashboardExplorer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    printBlue("h1");
+    print(loginpage.plantView);
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -46,7 +49,7 @@ class DashboardExploreCard extends StatelessWidget {
             fontSize: 14,
             color: Colors.white,
           ),
-          Spacer(),
+          const Spacer(),
           Image.asset(
             "assets/down_arrow.png",
             width: 13,

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:smartcomm_pms_application/dashboardExplorer.dart';
 import 'package:smartcomm_pms_application/forgot_password.dart';
 import 'package:smartcomm_pms_application/homepage.dart';
 import 'globalVals.dart';
@@ -150,15 +151,20 @@ class _LoginPageStfulState extends State<LoginPageStful> {
                             }).then((value) {
                               if (value == true) {
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HomePage()));
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DashboardExplorer(),
+                                    // builder: (context) => const HomePage(),
+                                  ),
+                                );
                               } else if (value == false) {
                                 ischecking_req = false;
                                 setState(() {});
                                 toastMessagePopup(
-                                    context, "Invalid Credentials");
+                                  context,
+                                  "Invalid Credentials",
+                                );
                               }
                             });
                           },
@@ -206,20 +212,27 @@ class _LoginPageStfulState extends State<LoginPageStful> {
   }
 }
 
+late Map<String, dynamic> plantView;
+
 Future checkValidityUser(String username, String password) async {
-  // Super@12345
-  // Super_User
-  return true;
-  final response = await http.get(Uri.parse(
-      'http://10.189.118.85:4000/login?user=$username&pass=$password'));
-  if (response.statusCode == 200) {
-    var n1 = LoginCreds.fromJson(jsonDecode(response.body));
-    if (n1.status == 1) {
-      printBlue("auth successful");
-      return true;
+  // return true;
+  username = "Super_User";
+  password = "Super@12345";
+  try {
+    final response = await http.get(Uri.parse(
+        'http://10.189.118.85:4000/login?user=$username&pass=$password'));
+    if (response.statusCode == 200) {
+      var n1 = LoginCreds.fromJson(jsonDecode(response.body));
+      if (n1.status == 1) {
+        printBlue("auth successful");
+        plantView = n1.plantview;
+        return true;
+      }
+    } else {
+      printError("Error fetching request, HTTP CODE:${response.statusCode}");
     }
-  } else {
-    printError("Error fetching request, HTTP CODE:${response.statusCode}");
+  } catch (e) {
+    printBlue("error is:$e");
   }
   printBlue("auth not success");
   return false;
@@ -230,16 +243,18 @@ bool isPasswordHidden = true;
 class LoginCreds {
   final int status;
   final String message;
+  final Map<String, dynamic> plantview;
   const LoginCreds({
     required this.status,
     required this.message,
+    required this.plantview,
   });
 
   factory LoginCreds.fromJson(Map<String, dynamic> json) {
     return LoginCreds(
-      status: json['status'],
-      message: json['message'],
-    );
+        status: json['status'],
+        message: json['message'],
+        plantview: json['pantview']);
   }
 }
 
