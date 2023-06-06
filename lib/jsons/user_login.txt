@@ -1,0 +1,1286 @@
+{
+    "message": "user details are present",
+    "status": 1,
+    "pantview": {
+        "Dashboard": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_3200A_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.5H/MTX35HDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_3200A_Incomer"
+                                        ],
+                                        "parent": "Ei_3200A_Incomer"
+                                    }
+                                ],
+                                "parent": "MTX35H"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_250A_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.0/MTX30Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_250A_Feeder"
+                                        ],
+                                        "parent": "Ei_250A_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_Wall_250A_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.0/MTX30Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_Wall_250A_Incomer"
+                                        ],
+                                        "parent": "Ti_Wall_250A_Incomer"
+                                    }
+                                ],
+                                "parent": "MTX30"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_400A_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_400A_Feeder"
+                                        ],
+                                        "parent": "Ei_400A_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_MCCB_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_MCCB_Feeder"
+                                        ],
+                                        "parent": "Ti_iPMCC_MCCB_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_MCCB"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_MCCB_iTRP5"
+                                        ],
+                                        "parent": "Wall_MCCB_iTRP5"
+                                    }
+                                ],
+                                "parent": "iTrip5"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_1600A_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_1600A_Incomer"
+                                        ],
+                                        "parent": "Ti_iPMCC_1600A_Incomer"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPCC_5000A_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPCC_5000A_Incomer"
+                                        ],
+                                        "parent": "Ti_iPCC_5000A_Incomer"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_ACB"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_ACB_MTX45"
+                                        ],
+                                        "parent": "Wall_ACB_MTX45"
+                                    }
+                                ],
+                                "parent": "MTX45"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_1600A_MCCB_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_1600A_MCCB_Incomer"
+                                        ],
+                                        "parent": "Ti_iPMCC_1600A_MCCB_Incomer"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_BBT_MCCB"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_BBT_MCCB"
+                                        ],
+                                        "parent": "Wall_BBT_MCCB"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_MCCB"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_MCCB_iTRP4"
+                                        ],
+                                        "parent": "Wall_MCCB_iTRP4"
+                                    }
+                                ],
+                                "parent": "iTrip4"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_ACB"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.5EC/MTX35ECDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_ACB_MTX35EC"
+                                        ],
+                                        "parent": "Wall_ACB_MTX35EC"
+                                    }
+                                ],
+                                "parent": "MTX35EC"
+                            }
+                        ],
+                        "parent": "Releases"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_22kW_Starter_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_22kW_Starter_Feeder"
+                                        ],
+                                        "parent": "Ei_22kW_Starter_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_2_2kW_Starter_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_2_2kW_Starter_Feeder"
+                                        ],
+                                        "parent": "Ei_2_2kW_Starter_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_Relay_Feeder"
+                                        ],
+                                        "parent": "Ti_iPMCC_Relay_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_CG_IMMR1"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_CG_IMMR1"
+                                        ],
+                                        "parent": "Wall_CG_IMMR1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_CG_IMMR2"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_CG_IMMR2"
+                                        ],
+                                        "parent": "Wall_CG_IMMR2"
+                                    }
+                                ],
+                                "parent": "iMMR"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_Hybrid_APFC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_Hybrid_APFC"
+                                        ],
+                                        "parent": "Ti_Hybrid_APFC"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_PQS_APFC1"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_PQS_APFC1"
+                                        ],
+                                        "parent": "Wall_PQS_APFC1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_PQS_APFC2"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_PQS_APFC2"
+                                        ],
+                                        "parent": "Wall_PQS_APFC2"
+                                    }
+                                ],
+                                "parent": "etaULTRA"
+                            }
+                        ],
+                        "parent": "Relays"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ei_MFM_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL6000/WL6000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ei_MFM_Feeder"
+                                        ],
+                                        "parent": "Ei_MFM_Feeder"
+                                    }
+                                ],
+                                "parent": "WC6000"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_1600A_MFM_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WC8000/PQ8000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_1600A_MFM_Incomer"
+                                        ],
+                                        "parent": "Ti_iPMCC_1600A_MFM_Incomer"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPCC_5000A_MFM_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WC8000/PQ8000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPCC_5000A_MFM_Incomer"
+                                        ],
+                                        "parent": "Ti_iPCC_5000A_MFM_Incomer"
+                                    }
+                                ],
+                                "parent": "WC8000"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_SmartDB_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/miEnergy - 1Phase/miEnergy1PhaseDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_SmartDB_MFM"
+                                        ],
+                                        "parent": "Wall_SmartDB_MFM"
+                                    }
+                                ],
+                                "parent": "miEnergy1Ph"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_Hybrid_MFM_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL7000/PQ7000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_Hybrid_MFM_Feeder"
+                                        ],
+                                        "parent": "Ti_Hybrid_MFM_Feeder"
+                                    }
+                                ],
+                                "parent": "WC7000"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPMCC_1600A_MFM"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL5000/WL5000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPMCC_1600A_MFM"
+                                        ],
+                                        "parent": "Ti_iPMCC_1600A_MFM"
+                                    }
+                                ],
+                                "parent": "WC5000"
+                            }
+                        ],
+                        "parent": "Meters"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_Drive_VFD_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Drives/Fx2000/Fx2000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_Drive_VFD_Feeder"
+                                        ],
+                                        "parent": "Ti_Drive_VFD_Feeder"
+                                    }
+                                ],
+                                "parent": "FX2000"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Drives/Nx2000Plus/Nx2000PlusDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_NX2000plus"
+                                        ],
+                                        "parent": "Wall_IA_NX2000plus"
+                                    }
+                                ],
+                                "parent": "NX2000plus"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Drives/Hx2000/Hx2000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_HX2000"
+                                        ],
+                                        "parent": "Wall_IA_HX2000"
+                                    }
+                                ],
+                                "parent": "HX2000"
+                            }
+                        ],
+                        "parent": "Drives"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_Drive_SoftStarter_Feeder"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/SoftStarter/EMX4i/EMX4iDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_Drive_SoftStarter_Feeder"
+                                        ],
+                                        "parent": "Ti_Drive_SoftStarter_Feeder"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/SoftStarter/EMX4i/EMX4iDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_EMX4i"
+                                        ],
+                                        "parent": "Wall_IA_EMX4i"
+                                    }
+                                ],
+                                "parent": "EMX4i"
+                            }
+                        ],
+                        "parent": "SoftStarter"
+                    }
+                ],
+                "parent": "Devices"
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPCC_5000A_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPCC_5000A_Incomer"
+                                        ],
+                                        "parent": "5000A Incomer Release"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Ti_iPCC_5000A_MFM_Incomer"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WC8000/PQ8000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Ti_iPCC_5000A_MFM_Incomer"
+                                        ],
+                                        "parent": "5000A Incomer PQA"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "connectionstateobject": [
+                                                            "_Ti_Hybrid_APFC"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                                        "panelobject": [
+                                                            "Ti_Hybrid_APFC"
+                                                        ],
+                                                        "parent": "APFC"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/TiHybridAPFC.screen;;;",
+                                                "panelobject": [],
+                                                "parent": "Ti Hybrid APFC & AHF"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder1"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "connectionstateobject": [
+                                                            "_Ti_iPMCC_1600A_Incomer"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                                        "panelobject": [
+                                                            "Ti_iPMCC_1600A_Incomer"
+                                                        ],
+                                                        "parent": "1600A Incomer Release"
+                                                    },
+                                                    {
+                                                        "child": [],
+                                                        "connectionstateobject": [
+                                                            "_Ti_iPMCC_1600A_MFM_Incomer"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WC8000/PQ8000Dashboard.screen;;;",
+                                                        "panelobject": [
+                                                            "Ti_iPMCC_1600A_MFM_Incomer"
+                                                        ],
+                                                        "parent": "1600A Incomer MFM"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ti_iPMCC_MCCB_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ti_iPMCC_MCCB_Feeder"
+                                                                ],
+                                                                "parent": "400A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder1"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ti_iPMCC_1600A_MCCB_Incomer"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ti_iPMCC_1600A_MCCB_Incomer"
+                                                                ],
+                                                                "parent": "250A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "connectionstateobject": [
+                                                            "_Ti_iPMCC_1600A_MFM_Incomer"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/TiWallMount.screen;;;",
+                                                        "panelobject": [],
+                                                        "parent": "Outgoing Feeder2 (Ti Wallmount)"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ti_Drive_VFD_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Drives/Fx2000/Fx2000Dashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ti_Drive_VFD_Feeder"
+                                                                ],
+                                                                "parent": "Motor Load1"
+                                                            },
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ti_Drive_SoftStarter_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/SoftStarter/EMX4i/EMX4iDashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ti_Drive_SoftStarter_Feeder"
+                                                                ],
+                                                                "parent": "Motor Load2"
+                                                            }
+                                                        ],
+                                                        "connectionstateobject": [
+                                                            "_Ti_iPMCC_1600A_MFM_Incomer"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/TiVFD.screen;;;",
+                                                        "panelobject": [],
+                                                        "parent": "Outgoing Feeder3 (Ti VFD)"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/TiiPMCCOverview.screen;;;",
+                                                "panelobject": [],
+                                                "parent": "1600A Ti Incomer(Ti iPMCC)"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder2"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "connectionstateobject": [
+                                                            "_Ei_3200A_Incomer"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.5H/MTX35HDashboard.screen;;;",
+                                                        "panelobject": [
+                                                            "Ei_3200A_Incomer"
+                                                        ],
+                                                        "parent": "3200A Incomer Release"
+                                                    },
+                                                    {
+                                                        "child": [],
+                                                        "connectionstateobject": [
+                                                            "_Ei_MFM_Feeder"
+                                                        ],
+                                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL6000/WL6000Dashboard.screen;;;",
+                                                        "panelobject": [
+                                                            "Ei_MFM_Feeder"
+                                                        ],
+                                                        "parent": "3200A Incomer MFM"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ei_400A_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ei_400A_Feeder"
+                                                                ],
+                                                                "parent": "400A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder1"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ei_250A_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.0/MTX30Dashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ei_250A_Feeder"
+                                                                ],
+                                                                "parent": "250A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder2"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ei_22kW_Starter_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ei_22kW_Starter_Feeder"
+                                                                ],
+                                                                "parent": "22kW Motor Load"
+                                                            },
+                                                            {
+                                                                "child": [],
+                                                                "connectionstateobject": [
+                                                                    "_Ei_2_2kW_Starter_Feeder"
+                                                                ],
+                                                                "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                                                "panelobject": [
+                                                                    "Ei_2_2kW_Starter_Feeder"
+                                                                ],
+                                                                "parent": "2.2kW Motor Load"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder3"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/EnerSysiiPMCC.screen;;;",
+                                                "panelobject": [],
+                                                "parent": "3200A Ei Incomer (Ei iPMCC)"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder3"
+                                    }
+                                ],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/TiPanels/TiPCCOverview.screen;;;",
+                                "panelobject": [],
+                                "parent": "Main Incomer (Ti iPCC)"
+                            }
+                        ],
+                        "connectionstateobject": [],
+                        "panelname": ";1-../screens/user/SmartCommModule/EnergyAnalytics/EnergyAnalytics.screen;2-../screens/user/SmartCommModule/PowerQuality/PowerQualityDashboard.screen;",
+                        "panelobject": [],
+                        "parent": "LT Room"
+                    }
+                ],
+                "parent": "Manufacturing Plant"
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_CG_IMMR1"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_CG_IMMR1"
+                                        ],
+                                        "parent": "Star Delta IMMR"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_CG_IMMR2"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/IMMRPanel/IMMRPanelDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_CG_IMMR2"
+                                        ],
+                                        "parent": "RDOL IMMR"
+                                    }
+                                ],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/CGiMMR.screen;;;",
+                                "panelobject": [],
+                                "parent": "IMMR Overview"
+                            }
+                        ],
+                        "parent": "Motor Protection"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Drives/Hx2000/Hx2000Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_HX2000"
+                                        ],
+                                        "parent": "VFD-1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Drives/Nx2000Plus/Nx2000PlusDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_NX2000plus"
+                                        ],
+                                        "parent": "VFD-2"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_IA_PLC"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/SoftStarter/EMX4i/EMX4iDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_IA_EMX4i"
+                                        ],
+                                        "parent": "Soft Starter"
+                                    }
+                                ],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/DriveSoftStarter.screen;;;",
+                                "panelobject": [],
+                                "parent": "IA Overview"
+                            }
+                        ],
+                        "parent": "Industrial Automation"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_PQS_APFC1"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_PQS_APFC1"
+                                        ],
+                                        "parent": "APFC-1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_Wall_PQS_APFC2"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Relays/etaUltra/etaUltraDashboard.screen;;;",
+                                        "panelobject": [
+                                            "Wall_PQS_APFC2"
+                                        ],
+                                        "parent": "APFC-2"
+                                    }
+                                ],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/APFC.screen;;;",
+                                "panelobject": [],
+                                "parent": "PQS Overview"
+                            }
+                        ],
+                        "parent": "Power Quality Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/ATSE.screen;;;",
+                                "panelobject": [],
+                                "parent": "ATS Overview"
+                            }
+                        ],
+                        "parent": "Power Transfer Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_Wall_BBT_MCCB"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "Wall_BBT_MCCB"
+                                                ],
+                                                "parent": "DZ6 iTRP4"
+                                            }
+                                        ],
+                                        "connectionstateobject": [],
+                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/BBT.screen;;;",
+                                        "panelobject": [],
+                                        "parent": "BBT Overview"
+                                    }
+                                ],
+                                "parent": "BBT"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_Wall_ACB"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Releases/MTX4.5/MTX45Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "Wall_ACB_MTX45"
+                                                ],
+                                                "parent": "Omega ACB MTX4.5"
+                                            },
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_Wall_ACB"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Releases/MTX3.5EC/MTX35ECDashboard.screen;;;",
+                                                "panelobject": [
+                                                    "Wall_ACB_MTX35EC"
+                                                ],
+                                                "parent": "Omega ACB MTX3.5EC"
+                                            },
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_Wall_MCCB"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip5/iTrip5Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "Wall_MCCB_iTRP5"
+                                                ],
+                                                "parent": "DZ6 iTRP5"
+                                            },
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_Wall_MCCB"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Releases/iTrip4/iTrip4Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "Wall_MCCB_iTRP4"
+                                                ],
+                                                "parent": "DZ6 iTRP4"
+                                            }
+                                        ],
+                                        "connectionstateobject": [],
+                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/MCCBOverview.screen;;;",
+                                        "panelobject": [],
+                                        "parent": "MCCB Overview"
+                                    }
+                                ],
+                                "parent": "MCCB"
+                            }
+                        ],
+                        "parent": "Power Distribution Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [],
+                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/SmartDBOverview.screen;;;",
+                                        "panelobject": [],
+                                        "parent": "SmartDB Overview"
+                                    }
+                                ],
+                                "parent": "Smart DB"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [],
+                                        "panelname": "../screens/user/SmartCommDashboard/Overview/Elecrama/Wall/SMDB.screen;;;",
+                                        "panelobject": [],
+                                        "parent": "SMDB Overview"
+                                    }
+                                ],
+                                "parent": "SM DB"
+                            }
+                        ],
+                        "parent": "Home Distribution Solution"
+                    }
+                ],
+                "parent": "Product Display"
+            }
+        ],
+        "SLD": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "5000A Incomer Release"
+                                    },
+                                    {
+                                        "child": [],
+                                        "parent": "5000A Incomer PQA"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "parent": "APFC"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommSLD/TiHybridSLD.screen",
+                                                "panelobject": [],
+                                                "parent": "Ti Hybrid APFC & AHF"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder1"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "parent": "1600A Incomer Release"
+                                                    },
+                                                    {
+                                                        "child": [],
+                                                        "parent": "1600A Incomer MFM"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "400A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder1"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "250A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "connectionstateobject": [],
+                                                        "panelname": "../screens/user/SmartCommSLD/TiWallmount.screen",
+                                                        "panelobject": [],
+                                                        "parent": "Outgoing Feeder2 (Ti Wallmount)"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "Motor Load1"
+                                                            },
+                                                            {
+                                                                "child": [],
+                                                                "parent": "Motor Load2"
+                                                            }
+                                                        ],
+                                                        "connectionstateobject": [],
+                                                        "panelname": "../screens/user/SmartCommSLD/TiVFDSLD.screen",
+                                                        "panelobject": [],
+                                                        "parent": "Outgoing Feeder3 (Ti VFD)"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommSLD/TiiPMCCSLD.screen",
+                                                "panelobject": [],
+                                                "parent": "1600A Ti Incomer(Ti iPMCC)"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder2"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [],
+                                                        "parent": "3200A Incomer Release"
+                                                    },
+                                                    {
+                                                        "child": [],
+                                                        "parent": "3200A Incomer MFM"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "400A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder1"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "250A MCCB Feeder"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder2"
+                                                    },
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child": [],
+                                                                "parent": "22kW Motor Load"
+                                                            },
+                                                            {
+                                                                "child": [],
+                                                                "parent": "2.2kW Motor Load"
+                                                            }
+                                                        ],
+                                                        "parent": "Outgoing Feeder3"
+                                                    }
+                                                ],
+                                                "connectionstateobject": [],
+                                                "panelname": "../screens/user/SmartCommSLD/EiiPMCCSLD.screen",
+                                                "panelobject": [],
+                                                "parent": "3200A Ei Incomer (Ei iPMCC)"
+                                            }
+                                        ],
+                                        "parent": "Outgoing Feeder3"
+                                    }
+                                ],
+                                "connectionstateobject": [],
+                                "panelname": "../screens/user/SmartCommSLD/TiiPCCSLD.screen",
+                                "panelobject": [],
+                                "parent": "Main Incomer (Ti iPCC)"
+                            }
+                        ],
+                        "connectionstateobject": [],
+                        "panelname": "../screens/user/SmartCommSLD/SmartCommWallSLD.screen",
+                        "panelobject": [],
+                        "parent": "LT Room"
+                    }
+                ],
+                "parent": "Manufacturing Plant"
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "Star Delta IMMR"
+                                    },
+                                    {
+                                        "child": [],
+                                        "parent": "RDOL IMMR"
+                                    }
+                                ],
+                                "parent": "IMMR Overview"
+                            }
+                        ],
+                        "parent": "Motor Protection"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "VFD-1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "parent": "VFD-2"
+                                    },
+                                    {
+                                        "child": [],
+                                        "parent": "Soft Starter"
+                                    }
+                                ],
+                                "parent": "IA Overview"
+                            }
+                        ],
+                        "parent": "Industrial Automation"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "APFC-1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "parent": "APFC-2"
+                                    }
+                                ],
+                                "parent": "PQS Overview"
+                            }
+                        ],
+                        "parent": "Power Quality Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [],
+                                "parent": "ATS Overview"
+                            }
+                        ],
+                        "parent": "Power Transfer Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "parent": "DZ6 iTRP4"
+                                            }
+                                        ],
+                                        "parent": "BBT Overview"
+                                    }
+                                ],
+                                "parent": "BBT"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "parent": "Omega ACB MTX4.5"
+                                            },
+                                            {
+                                                "child": [],
+                                                "parent": "Omega ACB MTX3.5EC"
+                                            },
+                                            {
+                                                "child": [],
+                                                "parent": "DZ6 iTRP5"
+                                            },
+                                            {
+                                                "child": [],
+                                                "parent": "DZ6 iTRP4"
+                                            }
+                                        ],
+                                        "parent": "MCCB Overview"
+                                    }
+                                ],
+                                "parent": "MCCB"
+                            }
+                        ],
+                        "parent": "Power Distribution Solution"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "SmartDB Overview"
+                                    }
+                                ],
+                                "parent": "Smart DB"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "SMDB Overview"
+                                    }
+                                ],
+                                "parent": "SM DB"
+                            }
+                        ],
+                        "parent": "Home Distribution Solution"
+                    }
+                ],
+                "parent": "Product Display"
+            }
+        ]
+    }
+}
