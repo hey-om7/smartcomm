@@ -1,0 +1,271 @@
+{
+    "message": "user details are present",
+    "status": 1,
+    "pantview": {
+        "Dashboard": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device1"
+                                        ],
+                                        "parent": "4400_Device1"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device2"
+                                        ],
+                                        "parent": "4400_Device2"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device3"
+                                        ],
+                                        "parent": "4400_Device3"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device4"
+                                        ],
+                                        "parent": "4400_Device4"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device5"
+                                        ],
+                                        "parent": "4400_Device5"
+                                    },
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device6"
+                                        ],
+                                        "parent": "4400_Device6"
+                                    }
+                                ],
+                                "parent": "WC4400"
+                            }
+                        ],
+                        "parent": "Meters"
+                    }
+                ],
+                "parent": "Devices"
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_MFM_4400"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "4400_Device1"
+                                                ],
+                                                "parent": "Device1"
+                                            },
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_MFM_4400"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "4400_Device2"
+                                                ],
+                                                "parent": "Device2"
+                                            }
+                                        ],
+                                        "parent": "Subgroup1"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "connectionstateobject": [
+                                                    "_MFM_4400"
+                                                ],
+                                                "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                                "panelobject": [
+                                                    "4400_Device3"
+                                                ],
+                                                "parent": "Device3"
+                                            }
+                                        ],
+                                        "parent": "Subgroup2"
+                                    }
+                                ],
+                                "parent": "Group1"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device4"
+                                        ],
+                                        "parent": "Device4"
+                                    }
+                                ],
+                                "parent": "Group2"
+                            }
+                        ],
+                        "parent": "Area1"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [],
+                                "connectionstateobject": [
+                                    "_MFM_4400"
+                                ],
+                                "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                "panelobject": [
+                                    "4400_Device5"
+                                ],
+                                "parent": "Device5"
+                            }
+                        ],
+                        "parent": "Area2"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "connectionstateobject": [
+                                            "_MFM_4400"
+                                        ],
+                                        "panelname": "../screens/user/SmartCommDashboard/Meters/WL4400/WL4400Dashboard.screen;;;",
+                                        "panelobject": [
+                                            "4400_Device6"
+                                        ],
+                                        "parent": "Device6"
+                                    }
+                                ],
+                                "parent": "Area5"
+                            }
+                        ],
+                        "parent": "Area3"
+                    }
+                ],
+                "parent": "PlantView_Test"
+            }
+        ],
+        "SLD": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "parent": "Device1"
+                                            },
+                                            {
+                                                "child": [],
+                                                "parent": "Device2"
+                                            }
+                                        ],
+                                        "parent": "Subgroup1"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [],
+                                                "parent": "Device3"
+                                            }
+                                        ],
+                                        "parent": "Subgroup2"
+                                    }
+                                ],
+                                "parent": "Group1"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "Device4"
+                                    }
+                                ],
+                                "parent": "Group2"
+                            }
+                        ],
+                        "parent": "Area1"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [],
+                                "parent": "Device5"
+                            }
+                        ],
+                        "parent": "Area2"
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [],
+                                        "parent": "Device6"
+                                    }
+                                ],
+                                "parent": "Area5"
+                            }
+                        ],
+                        "parent": "Area3"
+                    }
+                ],
+                "parent": "PlantView_Test"
+            }
+        ]
+    }
+}
