@@ -84,11 +84,11 @@ class Alarms extends StatelessWidget {
                           // AlarmCard(alarmsmode: AlarmsMode.Severe),
                           // AlarmCard(alarmsmode: AlarmsMode.Warning),
                           // AlarmCard(alarmsmode: AlarmsMode.Information),
-                          // AlarmCard(alarmsmode: AlarmsMode.Severe),
+
                           ...List.generate(snapshot.data.length, (index) {
                             var thisData = snapshot.data[index];
                             return AlarmCard(
-                              alarmsmode: AlarmsMode.Warning,
+                              alarmmode: thisData['alarm_shortsign'],
                               priority: int.parse(thisData['priority']),
                               value: thisData['value'] == ""
                                   ? "-"
@@ -144,7 +144,7 @@ Future getAlarmsDatafromJson() async {
 
     // printWarning(tagObjsJson.toString());
     // var tagObjs = tagObjsJson.map((tagJson) => Ele.fromJson(tagJson)).toList();
-    var n1 = Ele.fromJson(jsonDecode(response.body));
+    var n1 = AlarmsJsonResponseStr.fromJson(jsonDecode(response.body));
     return n1.alarmElements;
   }
 }
@@ -186,20 +186,33 @@ class SeverityCard extends StatelessWidget {
 // ignore: constant_identifier_names
 enum AlarmsMode { Severe, Alarm, Warning, Information }
 
-Color getAlarmCardColor(AlarmsMode alarmsMode) {
-  if (alarmsMode == AlarmsMode.Severe) {
+Color getAlarmCardColor(String alarmsMode) {
+  if (alarmsMode == "Severe") {
     return const Color(0xffC42126);
   }
-  if (alarmsMode == AlarmsMode.Alarm) {
+  if (alarmsMode == "Alarm") {
     return const Color(0xffC46F21);
   }
-  if (alarmsMode == AlarmsMode.Warning) {
+  if (alarmsMode == "Warning") {
     return const Color(0xffF4D62A);
   }
-  if (alarmsMode == AlarmsMode.Information) {
+  if (alarmsMode == "Information") {
     return const Color(0xff199710);
   }
   return const Color(0xffffffff);
+  // if (alarmsMode == AlarmsMode.Severe) {
+  //   return const Color(0xffC42126);
+  // }
+  // if (alarmsMode == AlarmsMode.Alarm) {
+  //   return const Color(0xffC46F21);
+  // }
+  // if (alarmsMode == AlarmsMode.Warning) {
+  //   return const Color(0xffF4D62A);
+  // }
+  // if (alarmsMode == AlarmsMode.Information) {
+  //   return const Color(0xff199710);
+  // }
+  // return const Color(0xffffffff);
 }
 
 /*

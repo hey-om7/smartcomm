@@ -7,7 +7,7 @@ import 'alarms.dart';
 class AlarmCard extends StatefulWidget {
   const AlarmCard({
     super.key,
-    required this.alarmsmode,
+    required this.alarmmode,
     required this.priority,
     required this.value,
     required this.timestamp,
@@ -21,7 +21,7 @@ class AlarmCard extends StatefulWidget {
     required this.description,
   });
 
-  final AlarmsMode alarmsmode;
+  final String alarmmode;
   final int priority;
   final int value;
   final String timestamp;
@@ -39,6 +39,11 @@ class AlarmCard extends StatefulWidget {
 
 class _AlarmCardState extends State<AlarmCard> {
   bool isOpened = false;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +70,7 @@ class _AlarmCardState extends State<AlarmCard> {
                 ),
               ],
               border: Border.all(
-                color: getAlarmCardColor(widget.alarmsmode),
+                color: getAlarmCardColor(widget.alarmmode),
                 width: 1.5,
               ),
             ),
@@ -81,8 +86,9 @@ class _AlarmCardState extends State<AlarmCard> {
                       color: Colors.white,
                     ),
                     Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
                       decoration: BoxDecoration(
-                        color: getAlarmCardColor(widget.alarmsmode),
+                        color: getAlarmCardColor(widget.alarmmode),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: myText(
@@ -165,7 +171,7 @@ class _AlarmCardState extends State<AlarmCard> {
                 ),
               ],
               border: Border.all(
-                color: getAlarmCardColor(widget.alarmsmode),
+                color: getAlarmCardColor(widget.alarmmode),
                 width: 1.5,
               ),
             ),

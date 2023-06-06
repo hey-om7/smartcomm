@@ -1,16 +1,16 @@
 class Resp {}
 
-class Ele {
+class AlarmsJsonResponseStr {
   String message;
   List<dynamic> alarmElements;
   // List<AlarmCardInfo> alarmElements;
-  Ele({
+  AlarmsJsonResponseStr({
     required this.message,
     required this.alarmElements,
   });
 
-  factory Ele.fromJson(Map<String, dynamic> json) {
-    return Ele(
+  factory AlarmsJsonResponseStr.fromJson(Map<String, dynamic> json) {
+    return AlarmsJsonResponseStr(
       message: json['message'],
       alarmElements: json['alarmarray'],
     );
