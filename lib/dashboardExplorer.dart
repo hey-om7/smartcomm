@@ -2,6 +2,7 @@ import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
+import 'homepage.dart';
 import 'login_page.dart' as loginpage;
 
 class DashboardExplorer extends StatelessWidget {
@@ -10,13 +11,23 @@ class DashboardExplorer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     printBlue("h1");
-    print(loginpage.plantView);
+    print(loginpage.plantView.entries);
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
-        children: const [
-          DashboardExploreCard(
-            title: "Plant View",
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
+                ),
+              );
+            },
+            child: DashboardExploreCard(
+              title: "Plant View",
+            ),
           ),
           DashboardExploreCard(
             title: "Device View",
