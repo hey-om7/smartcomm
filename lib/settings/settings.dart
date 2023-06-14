@@ -122,14 +122,21 @@ class _SettingsState extends State<Settings> {
               )
             ],
           ),
-          const Row(
+          Row(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-                child: myText(
-                  text: "Ringtone & Vibration",
-                  color: Colors.white,
-                  fontSize: 14,
+              GestureDetector(
+                onTap: () {
+                  //7
+                  activeIndex = 7;
+                  widget.refreshParent();
+                },
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+                  child: myText(
+                    text: "Ringtone & Vibration",
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
                 ),
               ),
               Spacer(),

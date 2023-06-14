@@ -5,34 +5,39 @@ import 'package:smartcomm_pms_application/globalVals.dart';
 import 'homepage.dart';
 import 'login_page.dart' as loginpage;
 
+String activeName = "";
+
 class DashboardExplorer extends StatelessWidget {
   const DashboardExplorer({super.key});
 
   @override
   Widget build(BuildContext context) {
     printBlue("h1");
-    print(loginpage.plantView.entries);
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const HomePage(),
-                ),
-              );
-            },
-            child: DashboardExploreCard(
-              title: "Plant View",
+    print(loginpage.plantView);
+    return Scaffold(
+      backgroundColor: BasicValues.basicBlue3,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ),
+                );
+              },
+              child: DashboardExploreCard(
+                title: "Plant View",
+              ),
             ),
-          ),
-          DashboardExploreCard(
-            title: "Device View",
-          ),
-        ],
+            DashboardExploreCard(
+              title: "Device View",
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/alarms/alarms.dart';
 import 'package:smartcomm_pms_application/reports.dart';
 import 'package:smartcomm_pms_application/settings/editProfilename.dart';
+import 'package:smartcomm_pms_application/settings/ringtones.dart';
 import 'package:smartcomm_pms_application/settings/settings.dart';
 import 'package:smartcomm_pms_application/settings/settingsProfile.dart';
 
@@ -66,7 +67,8 @@ class _HomePageState extends State<HomePage> {
               const Reports(),
               Settings(refreshParent: refreshThisWidget),
               SettingsProfile(refreshParent: refreshThisWidget),
-              EditProfileName(refreshParent: refreshThisWidget)
+              EditProfileName(refreshParent: refreshThisWidget),
+              Ringtones(),
             ][activeIndex - 1],
           ],
         ));
