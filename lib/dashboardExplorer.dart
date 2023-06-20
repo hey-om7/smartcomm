@@ -1,15 +1,26 @@
+import 'dart:convert';
+
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 import 'homepage.dart';
 import 'login_page.dart' as loginpage;
+import 'testing_json.dart' as tjson;
 
 String activeName = "";
+Map<String, dynamic> jsonData = jsonDecode(tjson.jsonString);
+List<dynamic> childList = jsonData["pantview"]["Dashboard"];
+// List<dynamic> childList = jsonData["pantview"]["SLD"];
 
-class DashboardExplorer extends StatelessWidget {
+class DashboardExplorer extends StatefulWidget {
   const DashboardExplorer({super.key});
 
+  @override
+  State<DashboardExplorer> createState() => _DashboardExplorerState();
+}
+
+class _DashboardExplorerState extends State<DashboardExplorer> {
   @override
   Widget build(BuildContext context) {
     printBlue("h1");
@@ -18,23 +29,35 @@ class DashboardExplorer extends StatelessWidget {
       backgroundColor: BasicValues.basicBlue3,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
+        child: ListView(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ),
-                );
-              },
-              child: DashboardExploreCard(
-                title: "Plant View",
+            // GestureDetector(
+            //   onTap: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const HomePage(),
+            //       ),
+            //     );
+            //   },
+            //   child: DashboardExploreCard(
+            //     title: "Plant View",
+            //   ),
+            // ),
+            // DashboardExploreCard(
+            //   title: "Device View",
+            // ),
+            ...List.generate(
+              childList.length,
+              (index) => GestureDetector(
+                onTap: () {
+                  childList = childList[index]["child"];
+                  setState(() {});
+                },
+                child: DashboardExploreCard(
+                  title: childList[index]["parent"],
+                ),
               ),
-            ),
-            DashboardExploreCard(
-              title: "Device View",
             ),
           ],
         ),

@@ -215,7 +215,9 @@ class _LoginPageStfulState extends State<LoginPageStful> {
 late Map<String, dynamic> plantView;
 
 Future checkValidityUser(String username, String password) async {
-  // return true;
+  //TODO:REMOVE THIS BELOW 2 LINES
+  plantView = {"plantview": "hi"};
+  return true;
   username = "Super_User";
   password = "Super@12345";
   try {

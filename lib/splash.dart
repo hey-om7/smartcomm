@@ -31,7 +31,10 @@ class _SplashScreenStfulState extends State<SplashScreenStful> {
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const GetStarted()));
+          // context,
+          //   MaterialPageRoute(builder: (context) => const TestingJson()));
+          context,
+          MaterialPageRoute(builder: (context) => const GetStarted()));
     });
     super.initState();
   }
