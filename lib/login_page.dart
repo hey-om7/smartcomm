@@ -216,13 +216,13 @@ late Map<String, dynamic> plantView;
 
 Future checkValidityUser(String username, String password) async {
   //TODO:REMOVE THIS BELOW 2 LINES
-  plantView = {"plantview": "hi"};
-  return true;
+  // plantView = {"plantview": "hi"};
+  // return true;
   username = "Super_User";
   password = "Super@12345";
   try {
     final response = await http.get(Uri.parse(
-        'http://10.189.118.85:4000/login?user=$username&pass=$password'));
+        '${BasicValues.publicIp}/login?user=$username&pass=$password'));
     if (response.statusCode == 200) {
       var n1 = LoginCreds.fromJson(jsonDecode(response.body));
       if (n1.status == 1) {

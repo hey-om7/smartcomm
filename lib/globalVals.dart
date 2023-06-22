@@ -16,4 +16,5 @@ class BasicValues {
   static String smartCommBackground = "assets/smartcomm_bg_cropped.png";
   static String electronicsAutomationLogoBlue = "assets/logo/EAlogoblue.png";
   static String electronicsAutomationLogoWhite = "assets/logo/EAlogowhite.png";
+  static String publicIp = "http://10.189.118.70:4000";
 }

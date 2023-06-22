@@ -113,7 +113,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                                           });
                                         }),
                                     const myText(
-                                      text: "Password",
+                                      text: "Mobile",
                                       color: Colors.white,
                                       fontSize: 16,
                                     ),
@@ -212,6 +212,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           "assets/logo/EAlogowhite.png",
                           height: 40,
                         ),
+                        const SizedBox(
+                          height: 20,
+                        )
                       ],
                     ),
                   ),
