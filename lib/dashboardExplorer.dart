@@ -70,22 +70,32 @@ class _DashboardExplorerState extends State<DashboardExplorer> {
               childList.length,
               (index) => GestureDetector(
                 onTap: () {
-                  // printBlue(childList.toString());
-                  // printWarning(childList[index]["child"].toString());
-                  containsDirectories.add(childList);
-                  childList = childList[index]["child"];
-                  printWarning(childList[index]["panelname"].toString());
-
-                  setState(() {});
+                  printBlue("inside button");
+                  var panelName = childList[index]["panelname"];
+                  if (panelName != null) {
+                    printWarning("non null");
+                    printBlue(panelName);
+                    String dashboardName = panelName
+                        .toString()
+                        .split("/")
+                        .last
+                        .replaceAll(".screen;;;", "");
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => HomePage()));
+                  }
                 },
                 child: DashboardExploreCard(
                   title: childList[index]["parent"],
                   innerClick: () {
-                    printBlue("inside button");
-                    var panelName = childList[index]["panelname"];
-                    if (panelName != null) {
-                      printWarning("non null");
-                    }
+                    // printBlue(childList.toString());
+                    // printWarning(childList[index]["child"].toString());
+                    containsDirectories.add(childList);
+                    childList = childList[index]["child"];
+                    printWarning(childList[index]["panelname"].toString());
+
+                    setState(() {});
                   },
                 ),
               ),

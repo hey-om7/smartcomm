@@ -27,7 +27,7 @@ class Indicator extends StatelessWidget {
             Expanded(
                 child: Center(
               child: myText(
-                text: "ON",
+                text: text,
                 color: Colors.white,
                 fontSize: 24,
                 bold: FontWeight.bold,
@@ -37,7 +37,7 @@ class Indicator extends StatelessWidget {
               height: 40,
               width: 30,
               decoration: BoxDecoration(
-                color: Colors.amber,
+                color: color,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
