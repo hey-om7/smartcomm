@@ -26,7 +26,7 @@ void _scrollDown() async {
         duration: Duration(seconds: 1), curve: Curves.decelerate);
     printBlue("scrolling down");
     if (keepanimating) {
-      _scrollDown();
+      // _scrollDown();
     }
   });
 }

@@ -1,11 +1,9 @@
 import 'dart:convert';
-
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcomm_pms_application/globalVals.dart';
 import 'alarmCards.dart';
 import 'package:http/http.dart' as http;
-
 import 'classes.dart';
 
 class Alarms extends StatelessWidget {
@@ -74,59 +72,7 @@ class Alarms extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: FutureBuilder(
-                  future: getAlarmsDatafromJson(),
-                  builder: (context, AsyncSnapshot snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return ListView(
-                        physics: const BouncingScrollPhysics(),
-                        children: [
-                          // AlarmCard(alarmsmode: AlarmsMode.Alarm),
-                          // AlarmCard(alarmsmode: AlarmsMode.Severe),
-                          // AlarmCard(alarmsmode: AlarmsMode.Warning),
-                          // AlarmCard(alarmsmode: AlarmsMode.Information),
-
-                          ...List.generate(snapshot.data.length, (index) {
-                            var thisData = snapshot.data[index];
-                            return AlarmCard(
-                              alarmmode: thisData['alarm_shortsign'],
-                              priority: int.parse(thisData['priority']),
-                              value: thisData['value'] == ""
-                                  ? "-"
-                                  : thisData['value'],
-                              timestamp: thisData['time_stamp'] == ""
-                                  ? "-"
-                                  : thisData['time_stamp'],
-                              tagname: thisData["tagname"] == ""
-                                  ? "-"
-                                  : thisData["tagname"],
-                              ackstate: thisData['ack_state'] == ""
-                                  ? "-"
-                                  : thisData['ack_state'],
-                              acktime: thisData['ack_timestamp'] == ""
-                                  ? "-"
-                                  : thisData['ack_timestamp'],
-                              ackuser: thisData['ack_user'] == ""
-                                  ? "-"
-                                  : thisData['ack_user'],
-                              comments: thisData['user_comments'] == ""
-                                  ? "-"
-                                  : thisData['user_comments'],
-                              user: 1234,
-                              wenttime: thisData['wenttimestamp'] == ""
-                                  ? "-"
-                                  : thisData['wenttimestamp'],
-                              description: thisData['description'] == ""
-                                  ? "-"
-                                  : thisData['wenttimestamp'],
-                            );
-                          }),
-                        ],
-                      );
-                    } else {
-                      return const Center(child: CircularProgressIndicator());
-                    }
-                  }),
+              child: ListAlarms(),
             ),
           ),
         ],
@@ -135,18 +81,119 @@ class Alarms extends StatelessWidget {
   }
 }
 
-Future getAlarmsDatafromJson() async {
-  final response = await http
-      .get(Uri.parse('${BasicValues.publicIp}/alarmdata?alarmdatatype=Active'));
+class ListAlarms extends StatefulWidget {
+  const ListAlarms({
+    super.key,
+  });
 
-  if (response.statusCode == 200) {
-    // printBlue(response.body);
-    // var tagObjsJson = jsonDecode(response.body);
+  @override
+  State<ListAlarms> createState() => _ListAlarmsState();
+}
 
-    // printWarning(tagObjsJson.toString());
-    // var tagObjs = tagObjsJson.map((tagJson) => Ele.fromJson(tagJson)).toList();
-    var n1 = AlarmsJsonResponseStr.fromJson(jsonDecode(response.body));
-    return n1.alarmElements;
+int lengthCurrentAlarms = 0;
+
+class _ListAlarmsState extends State<ListAlarms> {
+  @override
+  Widget build(BuildContext context) {
+    Future checkandRefresh() async {
+      printBlue("checking for updates");
+      final response = await http.get(
+          Uri.parse('${BasicValues.publicIp}/alarmdata?alarmdatatype=Active'));
+      if (response.statusCode == 200) {
+        var n1 = AlarmsJsonResponseStr.fromJson(jsonDecode(response.body));
+        if (n1.alarmElements.length > lengthCurrentAlarms) {
+          setState(() {});
+        }
+      }
+      Future.delayed(Duration(seconds: 5), () {
+        checkandRefresh();
+      });
+    }
+
+    Future getAlarmsDatafromJson() async {
+      final response = await http.get(
+          Uri.parse('${BasicValues.publicIp}/alarmdata?alarmdatatype=Active'));
+
+      if (response.statusCode == 200) {
+        // printBlue(response.body);
+        // var tagObjsJson = jsonDecode(response.body);
+
+        // printWarning(tagObjsJson.toString());
+        // var tagObjs = tagObjsJson.map((tagJson) => Ele.fromJson(tagJson)).toList();
+        var n1 = AlarmsJsonResponseStr.fromJson(jsonDecode(response.body));
+        lengthCurrentAlarms = n1.alarmElements.length;
+        checkandRefresh();
+        return n1.alarmElements;
+      }
+    }
+
+    return FutureBuilder(
+        future: getAlarmsDatafromJson(),
+        builder: (context, AsyncSnapshot snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return ListView(
+              physics: const BouncingScrollPhysics(),
+              children: [
+                // AlarmCard(alarmsmode: AlarmsMode.Alarm),
+                // AlarmCard(alarmsmode: AlarmsMode.Severe),
+                // AlarmCard(alarmsmode: AlarmsMode.Warning),
+                // GestureDetector(
+                //   onTap: () {
+                //     print("presssed");
+                //     setState(() {});
+                //   },
+                //   child: AlarmCard(
+                //       alarmmode: "ssa",
+                //       priority: 1,
+                //       value: 2,
+                //       timestamp: "timestamp",
+                //       tagname: "tagname",
+                //       ackstate: "ackstate",
+                //       acktime: "acktime",
+                //       ackuser: "ackuser",
+                //       comments: "comments",
+                //       user: 1,
+                //       wenttime: "wenttime",
+                //       description: "description"),
+                // ),
+
+                ...List.generate(snapshot.data.length, (index) {
+                  var thisData = snapshot.data[index];
+                  return AlarmCard(
+                    alarmmode: thisData['alarm_shortsign'],
+                    priority: int.parse(thisData['priority']),
+                    value: thisData['value'] == "" ? "-" : thisData['value'],
+                    timestamp: thisData['time_stamp'] == ""
+                        ? "-"
+                        : thisData['time_stamp'],
+                    tagname:
+                        thisData["tagname"] == "" ? "-" : thisData["tagname"],
+                    ackstate: thisData['ack_state'] == ""
+                        ? "-"
+                        : thisData['ack_state'],
+                    acktime: thisData['ack_timestamp'] == ""
+                        ? "-"
+                        : thisData['ack_timestamp'],
+                    ackuser:
+                        thisData['ack_user'] == "" ? "-" : thisData['ack_user'],
+                    comments: thisData['user_comments'] == ""
+                        ? "-"
+                        : thisData['user_comments'],
+                    user: 1234,
+                    wenttime: thisData['wenttimestamp'] == ""
+                        ? "-"
+                        : thisData['wenttimestamp'],
+                    description: thisData['description'] == ""
+                        ? "-"
+                        : thisData['wenttimestamp'],
+                  );
+                }),
+              ],
+            );
+          } else {
+            return const Center(child: CircularProgressIndicator());
+          }
+        });
   }
 }
 
