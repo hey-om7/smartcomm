@@ -16,34 +16,32 @@ class SingleValueCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: PrimaryBox(
-        height: 90,
-        width: getDeviceWidth(context) / 2,
-        margin: margin,
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(6.0),
-                child: myText(
-                  text: title,
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
+    return PrimaryBox(
+      height: 90,
+      width: getDeviceWidth(context) / 2.3,
+      margin: margin,
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(6.0),
+              child: myText(
+                text: title,
+                color: Colors.white,
+                fontSize: 10,
               ),
             ),
-            Align(
-              alignment: Alignment.center,
-              child: myText(
-                text: value.toString(),
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            )
-          ],
-        ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: myText(
+              text: value.toString(),
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          )
+        ],
       ),
     );
   }

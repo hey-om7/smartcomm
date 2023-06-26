@@ -11,38 +11,36 @@ class Indicator extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 40,
-        width: 130,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          border: Border.all(
-            color: Colors.white,
-            width: 1,
-          ),
+    return Container(
+      height: 40,
+      width: 130,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        border: Border.all(
+          color: Colors.white,
+          width: 1,
         ),
-        child: Row(
-          children: [
-            Expanded(
-                child: Center(
-              child: myText(
-                text: text,
-                color: Colors.white,
-                fontSize: 24,
-                bold: FontWeight.bold,
-              ),
-            )),
-            Container(
-              height: 40,
-              width: 30,
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(5),
-              ),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+              child: Center(
+            child: myText(
+              text: text,
+              color: Colors.white,
+              fontSize: 24,
+              bold: FontWeight.bold,
             ),
-          ],
-        ),
+          )),
+          Container(
+            height: 40,
+            width: 30,
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        ],
       ),
     );
   }

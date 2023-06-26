@@ -18,3 +18,5 @@ class BasicValues {
   static String electronicsAutomationLogoWhite = "assets/logo/EAlogowhite.png";
   static String publicIp = "http://10.189.118.70:4000";
 }
+
+String passingDashboardName = "";

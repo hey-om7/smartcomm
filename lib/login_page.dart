@@ -218,8 +218,8 @@ Future checkValidityUser(String username, String password) async {
   //TODO:REMOVE THIS BELOW 2 LINES
   // plantView = {"plantview": "hi"};
   // return true;
-  username = "Super_User";
-  password = "Super@12345";
+  // username = "Super_User";
+  // password = "Super@12345";
   try {
     final response = await http.get(Uri.parse(
         '${BasicValues.publicIp}/login?user=$username&pass=$password'));

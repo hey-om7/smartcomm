@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:essential_kit/essential_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:smartcomm_pms_application/globalVals.dart';
 import 'alarmCards.dart';
 import 'package:http/http.dart' as http;
 
@@ -135,8 +136,8 @@ class Alarms extends StatelessWidget {
 }
 
 Future getAlarmsDatafromJson() async {
-  final response = await http.get(
-      Uri.parse('http://10.189.118.85:4000/alarmdata?alarmdatatype=Active'));
+  final response = await http
+      .get(Uri.parse('${BasicValues.publicIp}/alarmdata?alarmdatatype=Active'));
 
   if (response.statusCode == 200) {
     // printBlue(response.body);

@@ -70,20 +70,20 @@ class _DashboardExplorerState extends State<DashboardExplorer> {
               childList.length,
               (index) => GestureDetector(
                 onTap: () {
-                  printBlue("inside button");
+                  printBlue("inner button");
                   var panelName = childList[index]["panelname"];
                   if (panelName != null) {
-                    printWarning("non null");
                     printBlue(panelName);
                     String dashboardName = panelName
                         .toString()
                         .split("/")
                         .last
                         .replaceAll(".screen;;;", "");
+                    passingDashboardName = dashboardName;
                     Navigator.push(
                         context,
-                        new MaterialPageRoute(
-                            builder: (context) => HomePage()));
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   }
                 },
                 child: DashboardExploreCard(
